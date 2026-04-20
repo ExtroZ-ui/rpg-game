@@ -1,0 +1,37 @@
+{
+  "name": "rpg-game",
+  "version": "1.0.0",
+  "description": "RPG game Dungeons Dragons Adventures",
+  "keywords": [
+    "rpg",
+    "game",
+    "javascript"
+  ],
+  "homepage": "https://github.com/ExtroZ-ui/rpg-game#readme",
+  "bugs": {
+    "url": "https://github.com/ExtroZ-ui/rpg-game/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtroZ-ui/rpg-game.git"
+  },
+  "license": "ISC",
+  "author": "Extro",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.32.0"
+  },
+  "dependencies": {
+    "core-js": "^3.49.0"
+  }
+}

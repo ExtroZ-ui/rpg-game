@@ -3,11 +3,36 @@ import globals from 'globals';
 
 export default [
   {
-    ignores: ['dist/**', 'node_modules/**'],
+    ignores: ['dist/**', 'node_modules/**', 'coverage/**'],
   },
+
   js.configs.recommended,
+
   {
-    files: ['**/*.js'],
+    files: ['src/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.jest,
+      },
+    },
+    rules: {
+      'no-console': 'off',
+      semi: ['error', 'always'],
+      quotes: ['error', 'single'],
+      'comma-dangle': ['error', 'always-multiline'],
+      'object-curly-spacing': ['error', 'always'],
+      'arrow-parens': ['error', 'always'],
+      indent: ['error', 2],
+      'linebreak-style': 'off',
+      'eol-last': ['error', 'always'],
+    },
+  },
+
+  {
+    files: ['webpack.config.js', 'jest.config.js'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'commonjs',
@@ -16,14 +41,13 @@ export default [
       },
     },
     rules: {
-      'no-unused-vars': 'error',
       'no-console': 'off',
-      'semi': ['error', 'always'],
-      'quotes': ['error', 'single'],
+      semi: ['error', 'always'],
+      quotes: ['error', 'single'],
       'comma-dangle': ['error', 'always-multiline'],
       'object-curly-spacing': ['error', 'always'],
       'arrow-parens': ['error', 'always'],
-      'indent': ['error', 2],
+      indent: ['error', 2],
       'linebreak-style': 'off',
       'eol-last': ['error', 'always'],
     },

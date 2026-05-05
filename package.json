@@ -17,19 +17,34 @@
   },
   "license": "ISC",
   "author": "Extro",
-  "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d dist",
-    "lint": "eslint ."
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "start": "http-server dist -p 8080",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+    
   },
   "devDependencies": {
     "@babel/cli": "^7.28.6",
     "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.29.2",
+    "@eslint/js": "^9.0.0",
+    "babel-jest": "^30.3.0",
+    "css-loader": "^7.0.0",
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.32.0"
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^15.0.0",
+    "html-webpack-plugin": "^5.0.0",
+    "http-server": "^14.0.0",
+    "jest": "^30.3.0",
+    "mini-css-extract-plugin": "^2.0.0",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^6.0.0"
   },
   "dependencies": {
     "core-js": "^3.49.0"

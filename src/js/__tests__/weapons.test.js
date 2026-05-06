@@ -1,12 +1,12 @@
-import Weapon from '../Weapon';
-import Arm from '../Arm';
-import Bow from '../Bow';
-import Sword from '../Sword';
-import Knife from '../Knife';
-import Staff from '../Staff';
-import LongBow from '../LongBow';
-import Axe from '../Axe';
-import StormStaff from '../StormStaff';
+import Weapon from '../weapons/Weapon';
+import Arm from '../weapons/Arm';
+import Bow from '../weapons/Bow';
+import Sword from '../weapons/Sword';
+import Knife from '../weapons/Knife';
+import Staff from '../weapons/Staff';
+import LongBow from '../weapons/LongBow';
+import Axe from '../weapons/Axe';
+import StormStaff from '../weapons/StormStaff';
 
 describe('Weapon', () => {
   test('создаёт оружие с нужными свойствами', () => {

@@ -1,4 +1,8 @@
 import './css/style.css';
 import play from './js/game';
 
-play();
+const winner = play();
+
+if (winner) {
+  console.log(`Победитель: ${winner.name}`);
+}

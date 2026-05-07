@@ -5,7 +5,7 @@ import Dwarf from './characters/Dwarf';
 import Crossbowman from './characters/Crossbowman';
 import Demiurge from './characters/Demiurge';
 
-function createPlayers() {
+export function createPlayers() {
   return [
     new Warrior(0, 'Алёша Попович'),
     new Archer(3, 'Леголас'),
